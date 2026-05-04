@@ -27,7 +27,7 @@ The notes also cover node consistency, arc consistency, AC-3, backtracking searc
 
 The German Traffic Sign Benchmarks website provides context for the GTSRB dataset. It identifies GTSRB as a multi-category traffic sign recognition benchmark connected to the IJCNN 2011 competition. This supports the assignment framing for Part 3 and explains why a traffic-sign classifier is a realistic image classification task.
 
-The final workspace does not track the official GTSRB dataset. The report therefore distinguishes between the intended GTSRB problem context and the generated synthetic `data/demo_gtsrb/` dataset used to validate the implemented pipeline.
+The final workspace uses the extracted GTSRB training dataset at `gtsrb/Train`. The report therefore connects the GTSRB problem context directly to the implemented CNN pipeline and its real-dataset evaluation.
 
 ## 4. Stallkamp et al. GTSRB Paper
 
@@ -36,7 +36,7 @@ The final workspace does not track the official GTSRB dataset. The report theref
 
 The GTSRB paper describes traffic sign recognition as a real-world benchmark with more than 50,000 images and 43 classes. It explains that images vary by distance, lighting, weather, partial occlusion, rotation, and scale.
 
-This source supports the motivation for using machine learning and CNNs. A classifier must learn visual patterns that generalize across changing image conditions, not just memorize clean examples. In the final report, this source motivates the CNN approach while the demo results are reported separately as synthetic pipeline-validation results.
+This source supports the motivation for using machine learning and CNNs. A classifier must learn visual patterns that generalize across changing image conditions, not just memorize clean examples. In the final report, this source motivates the CNN approach and the held-out evaluation on the extracted GTSRB training data.
 
 ## 5. TensorFlow Image Classification Tutorial
 

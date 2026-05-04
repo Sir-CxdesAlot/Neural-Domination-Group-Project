@@ -1,6 +1,6 @@
 # Background And Theory
 
-This section provides the theory used by the final notebook and report for the three implemented AI tasks: finding flight connections, generating a hospital shift schedule, and recognizing traffic signs from images. The explanations are aligned with the runnable code and the demo evaluation outputs in `reports/evaluation_metrics.json`.
+This section provides the theory used by the final notebook and report for the three implemented AI tasks: finding flight connections, generating a hospital shift schedule, and recognizing traffic signs from images. The explanations are aligned with the runnable code and the evaluation outputs in `reports/evaluation_metrics.json`.
 
 ## Part 1: Flight Connections Between Cities
 
@@ -58,7 +58,7 @@ The final output is a dictionary where each shift name maps to the assigned nurs
 
 The traffic sign recognition task is a supervised learning problem. In supervised learning, the model learns from examples where each input has a known label. Here, the inputs are traffic sign images, and the labels are the sign categories represented by folders numbered `0` through `42`.
 
-The assignment context is the German Traffic Sign Recognition Benchmark (GTSRB), a 43-class traffic sign image classification benchmark. The official GTSRB dataset is not tracked in this repository, so the final evaluation in this workspace used `data/demo_gtsrb/`, a generated synthetic traffic-sign dataset that validates the machine learning pipeline end to end.
+The assignment context is the German Traffic Sign Recognition Benchmark (GTSRB), a 43-class traffic sign image classification benchmark. The final evaluation in this workspace used the extracted dataset at `gtsrb/Train`, which contains 39,209 labeled training images arranged in class folders `0` through `42`.
 
 Before training, the images go through preprocessing in `load_gtsrb()`. Each image is loaded with OpenCV, resized to `30x30`, converted into an array, and normalized by dividing pixel values by `255.0`. Resizing is needed because the CNN expects consistent input dimensions. Normalization scales raw pixel values into a smaller numeric range that is easier for the model to process during training.
 
@@ -73,4 +73,4 @@ A convolutional neural network (CNN) is appropriate for this task because CNNs a
 
 The training pipeline uses an 80/20 stratified train/test split, a 10% validation split inside the training set, categorical cross-entropy loss, the Adam optimizer, and accuracy as the main metric. The evaluation also produces a confusion matrix and sample prediction visualizations, because accuracy alone does not show which classes are being confused.
 
-The final demo evaluation trained for 6 epochs with batch size 32. It achieved test accuracy `0.6250`, with `65 / 104` correct predictions. The generated figures are `reports/figures/confusion.png`, `reports/figures/sample_predictions.png`, and `reports/figures/training_curve.png`.
+The final GTSRB evaluation trained for 6 epochs with batch size 32. It achieved held-out test accuracy `0.9872`, with `7,742 / 7,842` correct predictions. The generated figures are `reports/figures/confusion.png`, `reports/figures/sample_predictions.png`, and `reports/figures/training_curve.png`.

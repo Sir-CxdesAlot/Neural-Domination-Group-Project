@@ -1,7 +1,7 @@
 {
   "part1": {
     "status": "completed",
-    "dataset": "data/demo_flights",
+    "dataset": "data\\demo_flights",
     "cases_run": 4,
     "cases_passed": 4,
     "results": [
@@ -46,11 +46,11 @@
         "ended_at_target": false
       }
     ],
-    "figure": "reports/figures/part1_route_lengths.png"
+    "figure": "reports\\figures\\part1_route_lengths.png"
   },
   "part2": {
     "status": "completed",
-    "dataset": "data/demo_staff/staff_small.txt",
+    "dataset": "data\\demo_staff\\staff_small.txt",
     "nurses": 10,
     "metrics": {
       "complete": true,
@@ -69,20 +69,21 @@
       "passes_constraints": true
     },
     "figures": [
-      "reports/figures/part2_shift_distribution.png",
-      "reports/figures/part2_schedule_overview.png"
+      "reports\\figures\\part2_shift_distribution.png",
+      "reports\\figures\\part2_schedule_overview.png"
     ]
   },
   "part3": {
     "status": "completed",
-    "dataset": "data/demo_gtsrb",
-    "total_images": 516,
-    "test_images": 104,
+    "dataset": "gtsrb\\Train",
+    "dataset_kind": "real",
+    "total_images": 39209,
+    "test_images": 7842,
     "epochs": 6,
     "batch_size": 32,
-    "loss": 1.589119553565979,
-    "accuracy": 0.625,
-    "correct_predictions": 65,
+    "loss": 0.06933698058128357,
+    "accuracy": 0.9872481226921082,
+    "correct_predictions": 7742,
     "confusion_matrix_validation": {
       "shape": [
         43,
@@ -91,10 +92,10 @@
       "sum_matches_test_size": true
     },
     "figures": [
-      "reports/figures/confusion.png",
-      "reports/figures/sample_predictions.png",
-      "reports/figures/training_curve.png"
+      "reports\\figures\\confusion.png",
+      "reports\\figures\\sample_predictions.png",
+      "reports\\figures\\training_curve.png"
     ],
-    "model_artifact": "reports/artifacts/demo_model.keras"
+    "model_artifact": "reports\\artifacts\\gtsrb_model.keras"
   }
 }

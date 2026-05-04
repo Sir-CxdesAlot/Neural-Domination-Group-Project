@@ -4,9 +4,9 @@ This file captures the latest runnable results produced in this workspace. The c
 
 ## Important context
 
-- The official assignment datasets for flights, hospital staff files, and GTSRB are still not tracked in this repository.
+- The official assignment datasets for flights and hospital staff files are still not tracked in this repository.
 - Parts 1 and 2 were validated on generated demo datasets.
-- Part 3 was executed on a generated synthetic traffic-sign dataset to validate the CNN pipeline end to end.
+- Part 3 was executed on the extracted GTSRB training dataset in `gtsrb/Train`.
 
 ## Part 1 - Flight Connections
 
@@ -34,13 +34,16 @@ This file captures the latest runnable results produced in this workspace. The c
 ## Part 3 - Traffic Sign Recognition
 
 - Entry point: `src/train.py`
-- Dataset used: `data/demo_gtsrb/`
+- Dataset used: `gtsrb/Train`
+- Dataset kind: real GTSRB training data
+- Total images loaded: `39,209`
+- Held-out test images: `7,842`
 - Training run executed with:
   - `EVAL_EPOCHS=6`
   - `EVAL_BATCH=32`
-- Final evaluation-script test accuracy: `0.6250`
-- Correct predictions: `65 / 104`
-- Saved model: `reports/artifacts/demo_model.keras`
+- Final evaluation-script test accuracy: `0.9872`
+- Correct predictions: `7,742 / 7,842`
+- Saved model: `reports/artifacts/gtsrb_model.keras`
 - Evaluation figures:
   - `reports/figures/confusion.png`
   - `reports/figures/sample_predictions.png`
