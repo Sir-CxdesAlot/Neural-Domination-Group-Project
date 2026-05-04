@@ -1,6 +1,6 @@
 # Results Summary
 
-This file captures the latest runnable results produced in this workspace after switching execution to the machine's Conda `base` environment.
+This file captures the latest runnable results produced in this workspace. The canonical values match `reports/evaluation_metrics.json` and `reports/evaluation_notes.md`.
 
 ## Important context
 
@@ -36,10 +36,11 @@ This file captures the latest runnable results produced in this workspace after 
 - Entry point: `src/train.py`
 - Dataset used: `data/demo_gtsrb/`
 - Training run executed with:
-  - `EPOCHS=6`
-  - `BATCH=32`
-- Final direct training-script test accuracy: `0.6923`
-- Saved model: `reports/artifacts/demo_model_from_entry.keras`
+  - `EVAL_EPOCHS=6`
+  - `EVAL_BATCH=32`
+- Final evaluation-script test accuracy: `0.6250`
+- Correct predictions: `65 / 104`
+- Saved model: `reports/artifacts/demo_model.keras`
 - Evaluation figures:
   - `reports/figures/confusion.png`
   - `reports/figures/sample_predictions.png`
