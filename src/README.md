@@ -18,27 +18,35 @@ Download and extract the GTSRB dataset, then run:
 
 ```bash
 # Train only
-python part3_ml/train.py <path/to/gtsrb/>
+python part3_ml/train.py gtsrb/Train
 
 # Train and save model
-python part3_ml/train.py <path/to/gtsrb/> model.h5
+python part3_ml/train.py gtsrb/Train reports/artifacts/gtsrb_model.keras
 
 # With custom hyperparameters
-EPOCHS=20 BATCH=64 python part3_ml/train.py <path/to/gtsrb/> model.h5
+EPOCHS=20 BATCH=64 python part3_ml/train.py gtsrb/Train reports/artifacts/gtsrb_model.keras
 ```
 
 ### Expected dataset structure
 
 ```
 gtsrb/
-├── 0/
-│   ├── image1.ppm
-│   └── ...
-├── 1/
-│   ├── image1.ppm
-│   └── ...
-└── ... (folders 0–42)
+├── Train/
+│   ├── 0/
+│   │   ├── image1.png
+│   │   └── ...
+│   ├── 1/
+│   │   ├── image1.png
+│   │   └── ...
+│   └── ... (folders 0–42)
+├── Test/
+├── Train.csv
+├── Test.csv
+└── Meta.csv
 ```
+
+Use `gtsrb/Train` as the data path for the current loader. The root `gtsrb/`
+folder is ignored by Git because it is a local dataset.
 
 ### Hyperparameter options
 
