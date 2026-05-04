@@ -81,7 +81,7 @@ def shortest_path(source: str, target: str, cities: dict) -> list | None:
             continue
         explored.add(node.state)
 
-        for flight_id, city_id in neighbors_for_city(node.state, cities):
+        for flight_id, city_id in sorted(neighbors_for_city(node.state, cities)):
             if city_id in explored:
                 continue
 

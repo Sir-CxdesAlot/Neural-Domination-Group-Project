@@ -1,0 +1,10 @@
+flight_id,source_city_id,destination_city_id,airline_id
+101,1,2,A1
+102,2,3,A1
+103,3,4,A1
+104,1,6,A2
+105,6,3,A2
+106,2,5,A3
+107,5,4,A3
+108,3,5,A3
+109,5,6,A2
