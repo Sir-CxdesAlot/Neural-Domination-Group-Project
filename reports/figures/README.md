@@ -1,0 +1,1 @@
+Figures produced by evaluation notebooks go here.\n\nExample files:\n- confusion.png\n- sample_predictions.png\n
