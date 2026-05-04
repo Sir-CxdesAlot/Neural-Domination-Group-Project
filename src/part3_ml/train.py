@@ -33,7 +33,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, classification_report
 
-from models.cnn        import build_baseline_cnn, NUM_CLASSES
+from models.Cnn        import build_baseline_cnn, NUM_CLASSES
 from utils.data_loader import load_gtsrb
 
 try:

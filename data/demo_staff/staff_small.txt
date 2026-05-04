@@ -1,0 +1,10 @@
+Alice,0
+Bob,Tuesday
+Carol,Wednesday
+David,Friday
+Eve,Saturday
+Frank,Monday
+Grace,Thursday
+Hannah,Sunday
+Ian,0
+Jade,0
