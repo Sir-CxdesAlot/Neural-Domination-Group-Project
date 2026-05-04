@@ -21,7 +21,7 @@ import os
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from models.csp        import Shift_AI_Solver
+from models.Csp        import Shift_AI_Solver
 from utils.data_loader import load_staff
 from utils.display     import print_schedule
 

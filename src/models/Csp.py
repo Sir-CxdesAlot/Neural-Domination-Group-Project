@@ -18,7 +18,7 @@ Pipeline
 
 Usage
 -----
-    from models.csp import Shift_AI_Solver
+    from models.Csp import Shift_AI_Solver
 
     nurses, leave = load_staff("staff_small.txt")
     solver   = Shift_AI_Solver(nurses, leave)
@@ -185,7 +185,7 @@ class Shift_AI_Solver:
 
         var = self.select_unassigned_variable(assignment)
 
-        for nurse in list(self.domains[var]):
+        for nurse in sorted(self.domains[var]):
             if not self._is_consistent(var, nurse, assignment):
                 continue
 

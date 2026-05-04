@@ -26,7 +26,7 @@ Metric    : accuracy
 
 Usage
 -----
-    from models.cnn import build_baseline_cnn
+    from models.Cnn import build_baseline_cnn
 
     model = build_baseline_cnn()
     model.summary()
@@ -78,12 +78,12 @@ def build_baseline_cnn(
 
     model = tf.keras.Sequential(
         [
+            tf.keras.layers.Input(shape=(img_size, img_size, 3), name="input"),
             # ── Convolutional block 1 ─────────────────────────────────────
             tf.keras.layers.Conv2D(
                 32, (3, 3),
                 activation="relu",
                 padding="same",
-                input_shape=(img_size, img_size, 3),
                 name="conv1",
             ),
             tf.keras.layers.MaxPooling2D(pool_size=(2, 2), name="pool1"),
