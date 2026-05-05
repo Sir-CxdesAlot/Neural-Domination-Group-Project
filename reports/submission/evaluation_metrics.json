@@ -1,0 +1,101 @@
+{
+  "part1": {
+    "status": "completed",
+    "dataset": "data\\demo_flights",
+    "cases_run": 4,
+    "cases_passed": 4,
+    "results": [
+      {
+        "case": "Windhoek to Cairo",
+        "expected_hops": 3,
+        "actual_hops": 3,
+        "path_found": true,
+        "passed": true,
+        "is_valid": true,
+        "hop_count": 3,
+        "ended_at_target": true
+      },
+      {
+        "case": "Johannesburg to Lagos",
+        "expected_hops": 1,
+        "actual_hops": 1,
+        "path_found": true,
+        "passed": true,
+        "is_valid": true,
+        "hop_count": 1,
+        "ended_at_target": true
+      },
+      {
+        "case": "Nairobi to Nairobi",
+        "expected_hops": 0,
+        "actual_hops": 0,
+        "path_found": true,
+        "passed": true,
+        "is_valid": true,
+        "hop_count": 0,
+        "ended_at_target": true
+      },
+      {
+        "case": "Cairo to Windhoek",
+        "expected_hops": null,
+        "actual_hops": null,
+        "path_found": false,
+        "passed": true,
+        "is_valid": false,
+        "hop_count": null,
+        "ended_at_target": false
+      }
+    ],
+    "figure": "reports\\figures\\part1_route_lengths.png"
+  },
+  "part2": {
+    "status": "completed",
+    "dataset": "data\\demo_staff\\staff_small.txt",
+    "nurses": 10,
+    "metrics": {
+      "complete": true,
+      "fully_assigned": true,
+      "leave_violations": [],
+      "rest_violations": [],
+      "max_shifts_per_nurse": 5,
+      "shift_counts": {
+        "Alice": 5,
+        "Bob": 5,
+        "Carol": 5,
+        "David": 5,
+        "Eve": 1
+      },
+      "fairness_stddev": 1.6,
+      "passes_constraints": true
+    },
+    "figures": [
+      "reports\\figures\\part2_shift_distribution.png",
+      "reports\\figures\\part2_schedule_overview.png"
+    ]
+  },
+  "part3": {
+    "status": "completed",
+    "dataset": "gtsrb\\Train",
+    "dataset_kind": "real",
+    "total_images": 39209,
+    "test_images": 7842,
+    "epochs": 6,
+    "batch_size": 32,
+    "loss": 0.06933698058128357,
+    "accuracy": 0.9872481226921082,
+    "correct_predictions": 7742,
+    "confusion_matrix_validation": {
+      "shape": [
+        43,
+        43
+      ],
+      "sum_matches_test_size": true
+    },
+    "figures": [
+      "reports\\figures\\confusion.png",
+      "reports\\figures\\sample_predictions.png",
+      "reports\\figures\\training_curve.png"
+    ],
+    "model_artifact": "reports\\artifacts\\gtsrb_model.keras"
+  }
+}
